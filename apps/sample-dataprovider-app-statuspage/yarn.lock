@@ -25,14 +25,16 @@
     jsonpointer "^5.0.0"
     urijs "^1.19.10"
 
-"@atlassian/forge-graphql@^8.1.0":
-  version "8.7.2"
-  resolved "https://packages.atlassian.com/api/npm/atlassian-npm/@atlassian/forge-graphql/-/forge-graphql-8.7.2.tgz#58a814e7ccd4c54ae41a537c4967fae114bb54a7"
-  integrity sha512-CbuHDuCCrDZ11GPyjQOy2sP5lcYxEPbB38uX7efgcxA/7eHIiAarbJ8+u69oy7mhe0ptzykAP7AqcuCxlW0uXA==
+"@atlassian/forge-graphql@^13.3.9":
+  version "13.23.2"
+  resolved "https://registry.yarnpkg.com/@atlassian/forge-graphql/-/forge-graphql-13.23.2.tgz#0023bfa5a50c22b21555f2f613cec6193b833cf6"
+  integrity sha512-R780560Z/JJbbHmEi/tSXJvIcI6Ie+M+OQ6vUn9r980VMoNCh6yg4bQk+/eqR8Fmb+5utBaooEzeyiq1+Hgp9Q==
   dependencies:
-    "@forge/api" "^2.3.0"
-    axios "^0.21.1"
+    "@forge/api" "^5.0.0"
+    "@forge/metrics" "0.2.25"
     fs "^0.0.1-security"
+    js-yaml "^4.1.0"
+    lodash "^4.17.21"
     path "^0.12.7"
     url-parse "^1.5.10"
 
@@ -605,7 +607,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@forge/api@2.6.0", "@forge/api@^2.3.0", "@forge/api@^2.6.0":
+"@forge/api@2.6.0", "@forge/api@^2.6.0":
   version "2.6.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/api/-/api-2.6.0.tgz#17df76756b998f550c7407bbc14bd67b3a6c0e45"
   integrity sha512-71mYOEThZ67uPtYn6EUSgqNOWm/hcEJNCbW6iVLQxvY1fh4KHGcPHf/RDP8+9+pJ49+NzZAWv3nAiv9VcQENuQ==
@@ -614,6 +616,44 @@
     "@forge/storage" "^1.1.0"
     "@types/node-fetch" "^2.5.7"
     node-fetch "^2.6.1"
+
+"@forge/api@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@forge/api/-/api-5.0.0.tgz#7f950d0ed567d52e2e4b9e5322216cab942fb876"
+  integrity sha512-v5CH68+1cENW/Z6ARizMzRmTBgTirLQL3i3u9nSpIINJfYA2ejDtF5P3sfBWJ25QhHuD2OM02hB+XLfYwEaBWw==
+  dependencies:
+    "@forge/auth" "0.0.5"
+    "@forge/egress" "1.3.0"
+    "@forge/storage" "1.7.1"
+    "@forge/util" "1.4.6"
+    "@types/node-fetch" "^2.6.11"
+    node-fetch "2.7.0"
+
+"@forge/api@^5.0.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@forge/api/-/api-5.3.0.tgz#3c4f63d1a2b3355caa776dec4a89e53bc86842bd"
+  integrity sha512-ebrmGpBV/E8vjpQYNFTxzKDzT78ub2UMYQua0Z7ullcRPUBAO5f644qm/IKb7za36d0ci1e+9jM85w6puA1nTw==
+  dependencies:
+    "@forge/auth" "0.0.8"
+    "@forge/egress" "1.4.1"
+    "@forge/i18n" "0.0.6"
+    "@forge/storage" "1.8.1"
+    "@forge/util" "1.4.9"
+    headers-utils "^3.0.2"
+
+"@forge/auth@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@forge/auth/-/auth-0.0.5.tgz#d8df38fc55a7508121bef2508f494ee4a81e8072"
+  integrity sha512-JIJMRRnNWQjvLlnf2Goc+/CEzx+XTpzTarOR7wzRMOEoE715T5gdvb4hWeyQVyRJkRJUQQAXxDPT0WH7rINOcg==
+  dependencies:
+    tslib "^2.6.2"
+
+"@forge/auth@0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@forge/auth/-/auth-0.0.8.tgz#2ed447d1bd70e6f16fa8cfd92d4884ed467831b7"
+  integrity sha512-nsI81rMYJz9qXSWrKiK6/ph0QIjwEUrBlUa6P/2+s8Gwwur/U82SDux3A25o4rbsqLdqWdpOTi/iRSKL1zUZfQ==
+  dependencies:
+    tslib "^2.6.2"
 
 "@forge/auth@^0.0.1":
   version "0.0.1"
@@ -748,12 +788,33 @@
     cheerio "^1.1.0"
     content-security-policy-parser "^0.4.1"
 
+"@forge/egress@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@forge/egress/-/egress-1.3.0.tgz#381252e9ff3d8fb1cd889426f9b2ddd6e13d3a04"
+  integrity sha512-M3yDCmIP8lMoYq2YqHhO20nHplIHOdRpuyNjlcygSDD15f0mVlw6XmJF3Htku5/MpBz+3opYZOlwTEmK2ozXSg==
+  dependencies:
+    minimatch "^9.0.3"
+
+"@forge/egress@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@forge/egress/-/egress-1.4.1.tgz#514e6000e93a2e200bc743042e04e9d74a4c3921"
+  integrity sha512-RUHQBsIc3IkQKT46cKSmqHzTfwh7pBbgzXtfGwN14ztcu+1xUqCf71f/LJvq3m4jdymtrQXHE5C8BN0yRGwRKg==
+  dependencies:
+    minimatch "^9.0.3"
+
 "@forge/egress@2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@forge/egress/-/egress-2.0.2.tgz#71a57057e4fd66d2dade04464b72a021ac54c511"
   integrity sha512-EiSOkveXOxjmsIldaNjcYTuAwMKYV6u8MQlLN1RBcYk33KO0Owb6E2cce7byY7NgeVmQr/wABqoIjsnZNannYw==
   dependencies:
     minimatch "^9.0.5"
+
+"@forge/i18n@0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@forge/i18n/-/i18n-0.0.6.tgz#0da192ade29dacce338e4dd1f924dc60a06b92ad"
+  integrity sha512-iIK0SxWwMUHp8ThYiBU+Cq/ty1Ng1dGEr+apWbh6SwbxaXWR8MGRr91AFj3BLLAiC6FXYprIBclgI8tRf0DxmA==
+  dependencies:
+    lodash "^4.17.21"
 
 "@forge/i18n@0.0.7":
   version "0.0.7"
@@ -792,6 +853,15 @@
     mime-types "^2.1.35"
     yaml "^2.3.4"
 
+"@forge/metrics@0.2.25":
+  version "0.2.25"
+  resolved "https://registry.yarnpkg.com/@forge/metrics/-/metrics-0.2.25.tgz#c18552438a8ee6882a3243d5a269f42d77f06d9f"
+  integrity sha512-3vE+S/LRKbNrMwcJ7yoSZ2CNUuPL/b7OiiwvlX4PD7ea8ETOcR0fvfFACogLink7hjC7P04xCqSl3MXqDxrX+A==
+  dependencies:
+    "@forge/api" "5.0.0"
+    "@forge/runtime" "5.10.4"
+    "@forge/util" "1.4.6"
+
 "@forge/resolver@^1.4.2":
   version "1.4.2"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/resolver/-/resolver-1.4.2.tgz#2fbdf3894c1a4a2c96d7e0dedb64bfd5eaa0dbd7"
@@ -799,10 +869,34 @@
   dependencies:
     "@forge/api" "2.6.0"
 
+"@forge/runtime@5.10.4":
+  version "5.10.4"
+  resolved "https://registry.yarnpkg.com/@forge/runtime/-/runtime-5.10.4.tgz#d38f25f516c0e5f62fcb0564f1dbe10bf427dc68"
+  integrity sha512-LDF9LpE/gsecagFsgPwmC8NV+KGmnTL0pRReqtDkO9topz0ToeirvLF2d5B7akaAdmNGZVvGSSi5d9p8lQ6IWQ==
+  dependencies:
+    "@forge/util" "1.4.6"
+    fp-ts "^2.16.2"
+    io-ts "^2.2.21"
+    io-ts-reporters "^2.0.1"
+    node-fetch "2.7.0"
+    tslib "^2.6.2"
+    ws "^7.5.9"
+    yaml "^2.3.4"
+
 "@forge/runtime@6.0.2":
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/@forge/runtime/-/runtime-6.0.2.tgz#d97b61491fe5f1ab4d6f360a7eb6815fb6832c77"
   integrity sha512-dP85JR3k/qZOedcbyepwrr6C3G9Xn4dwfQExXtlDxboRhA98TZnh7e1ZvSQrc0K3nt8drWRrxTGLhW2p2SBAbg==
+
+"@forge/storage@1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@forge/storage/-/storage-1.7.1.tgz#2f1fd6fbca2de12ef01258f039ca6096fbd1756c"
+  integrity sha512-Gym7RdE/wltXFHNHz7Dji9aAM52OFIZaRWgosNOdOzykCJRO/MXwj7gTpluasqlu+2/kerfAVlK8PNobkDNhQQ==
+
+"@forge/storage@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@forge/storage/-/storage-1.8.1.tgz#dbf2c782188d4ffbd5bfbb0da1740e0bfd528c36"
+  integrity sha512-wPssW7sIuoM6aN3xHtO5MFU3bJ/i3mJ1Yo8U10qMegKC0kO+KDe6JE/GTOjoPc0JqtCPCiTnT9OgxFUXzwIElQ==
 
 "@forge/storage@^1.1.0":
   version "1.1.0"
@@ -831,14 +925,27 @@
     webpack-dev-server "^5.2.2"
     which "^3.0.1"
 
-"@forge/ui@^1.1.0":
-  version "1.1.0"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/@forge/ui/-/ui-1.1.0.tgz#f44a4ca158d1c2d3fa70976386aa703dc159e268"
-  integrity sha512-Y0MnQloMIRbYFgPcd5BudkMcXOyjOZQiUTJ/LKu9FlbBFHAK//0peyG2FyQfJfd26llU6UI6HjOQAFjy7jD6AA==
+"@forge/ui@^1.11.4":
+  version "1.11.4"
+  resolved "https://registry.yarnpkg.com/@forge/ui/-/ui-1.11.4.tgz#65badb34b103c1234ab45537409738e31ac3e84d"
+  integrity sha512-eSlW5eZhnD0ju4qN9ePLtxkjvF0u3kJ0kMOLq3cGN/7dyw30ltfppUhRHEdDPzibl5YM1EPplDOwicAmYgtffA==
   dependencies:
+    "@types/jest" "^29.5.12"
+    "@types/node" "14.18.63"
+    "@types/react" "^18.2.64"
     fast-json-stable-stringify "^2.1.0"
     sha.js "^2.4.11"
-    tslib "^1.11.0"
+    tslib "^2.6.2"
+
+"@forge/util@1.4.6":
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/@forge/util/-/util-1.4.6.tgz#49ddda3dd0995e4fecd67de1e7271c9ef406a159"
+  integrity sha512-6AXbt0VUJvlC6iPpt/eM1L6G16ydJ5S+XR8rjzDpWtLTQhtexkDpGj2milAweqdElGrxLe64Hd/Q+SvqJPXA5Q==
+
+"@forge/util@1.4.9":
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/@forge/util/-/util-1.4.9.tgz#157aa1af66395ffcd7468c9970aa5e3a5c80fa54"
+  integrity sha512-ZLSXBRnIo/KRk3PKz7tb1YSywSHZCTY2JvG9OoU+qx1zU/rDPSP1K+72iBU7lK0x99eAraA5qEpZwPWaUIbBTw==
 
 "@forge/util@2.0.0":
   version "2.0.0"
@@ -956,6 +1063,13 @@
     "@types/node" "*"
     jest-mock "^27.5.1"
 
+"@jest/expect-utils@^29.7.0":
+  version "29.7.0"
+  resolved "https://registry.yarnpkg.com/@jest/expect-utils/-/expect-utils-29.7.0.tgz#023efe5d26a8a70f21677d0a1afc0f0a44e3a1c6"
+  integrity sha512-GlsNBWiFQFCVi9QVSx7f5AgMeLxe9YCCs5PuP2O2LdjDAA8Jh9eX7lA1Jq/xdXw3Wb3hyvlFNfZIfcRetSzYcA==
+  dependencies:
+    jest-get-type "^29.6.3"
+
 "@jest/fake-timers@^27.5.1":
   version "27.5.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@jest/fake-timers/-/fake-timers-27.5.1.tgz#76979745ce0579c8a94a4678af7a748eda8ada74"
@@ -1007,6 +1121,13 @@
     string-length "^4.0.1"
     terminal-link "^2.0.0"
     v8-to-istanbul "^8.1.0"
+
+"@jest/schemas@^29.6.3":
+  version "29.6.3"
+  resolved "https://registry.yarnpkg.com/@jest/schemas/-/schemas-29.6.3.tgz#430b5ce8a4e0044a7e3819663305a7b3091c8e03"
+  integrity sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==
+  dependencies:
+    "@sinclair/typebox" "^0.27.8"
 
 "@jest/source-map@^27.5.1":
   version "27.5.1"
@@ -1067,6 +1188,18 @@
     "@types/istanbul-reports" "^3.0.0"
     "@types/node" "*"
     "@types/yargs" "^16.0.0"
+    chalk "^4.0.0"
+
+"@jest/types@^29.6.3":
+  version "29.6.3"
+  resolved "https://registry.yarnpkg.com/@jest/types/-/types-29.6.3.tgz#1131f8cf634e7e84c5e77bab12f052af585fba59"
+  integrity sha512-u3UPsIilWKOM3F9CXtrG8LEJmNxwoCQC/XVj4IKYXvvpx7QIi/Kg1LI5uDmDpKlac62NUtX7eLjRh+jVZcLOzw==
+  dependencies:
+    "@jest/schemas" "^29.6.3"
+    "@types/istanbul-lib-coverage" "^2.0.0"
+    "@types/istanbul-reports" "^3.0.0"
+    "@types/node" "*"
+    "@types/yargs" "^17.0.8"
     chalk "^4.0.0"
 
 "@jridgewell/gen-mapping@^0.3.12", "@jridgewell/gen-mapping@^0.3.5":
@@ -1221,6 +1354,11 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.29.tgz#5a40109a1ab5f84d6fd8fc928b19f367cbe7e7b1"
   integrity sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==
 
+"@scarf/scarf@^1.1.1":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@scarf/scarf/-/scarf-1.4.0.tgz#3bbb984085dbd6d982494538b523be1ce6562972"
+  integrity sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ==
+
 "@sentry-internal/tracing@7.106.0":
   version "7.106.0"
   resolved "https://registry.yarnpkg.com/@sentry-internal/tracing/-/tracing-7.106.0.tgz#0752f6925c5120848c05dc6c87a60b25896f834b"
@@ -1259,6 +1397,11 @@
   integrity sha512-bVsePsXLpFu/1sH4rpJrPcnVxW2fXXfGfGxKs6Bm+dkOMbuVTlk/KAzIbdjCDIpVlrMDJmMNEv5xgTFjgWDkjw==
   dependencies:
     "@sentry/types" "7.106.0"
+
+"@sinclair/typebox@^0.27.8":
+  version "0.27.8"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
+  integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
 "@sindresorhus/is@^5.2.0":
   version "5.6.0"
@@ -1480,6 +1623,14 @@
     jest-matcher-utils "^27.0.0"
     pretty-format "^27.0.0"
 
+"@types/jest@^29.5.12":
+  version "29.5.14"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.14.tgz#2b910912fa1d6856cadcd0c1f95af7df1d6049e5"
+  integrity sha512-ZN+4sdnLUbo8EVvVc2ao0GFW6oVrQRPn4K2lglySj7APvSrgzxHiNNK99us4WDMi57xxA2yggblIAMNhXOotLQ==
+  dependencies:
+    expect "^29.0.0"
+    pretty-format "^29.0.0"
+
 "@types/json-schema@*", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.9":
   version "7.0.9"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"
@@ -1508,6 +1659,14 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
+"@types/node-fetch@^2.6.11":
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.6.13.tgz#e0c9b7b5edbdb1b50ce32c127e85e880872d56ee"
+  integrity sha512-QGpRVpzSaUs30JBSGPjOg4Uveu384erbHBoT1zeONvyCfwQxIkUshLAOqN/k9EjGviPRmWTTe6aH2qySWKTVSw==
+  dependencies:
+    "@types/node" "*"
+    form-data "^4.0.4"
+
 "@types/node-forge@^1.3.0":
   version "1.3.13"
   resolved "https://registry.yarnpkg.com/@types/node-forge/-/node-forge-1.3.13.tgz#1797af20f7eccaf5f37b4d1739923bb0519d95b6"
@@ -1520,10 +1679,20 @@
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/node/-/node-17.0.21.tgz#864b987c0c68d07b4345845c3e63b75edd143644"
   integrity sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==
 
+"@types/node@14.18.63":
+  version "14.18.63"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.63.tgz#1788fa8da838dbb5f9ea994b834278205db6ca2b"
+  integrity sha512-fAtCfv4jJg+ExtXhvCkCqUKZ+4ok/JQk01qDKhL5BDDoS3AxKXhV5/MAVUZyQnSEd2GT92fkgZl0pz0Q0AzcIQ==
+
 "@types/prettier@^2.1.5":
   version "2.4.4"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/prettier/-/prettier-2.4.4.tgz#5d9b63132df54d8909fce1c3f8ca260fdd693e17"
   integrity sha512-ReVR2rLTV1kvtlWFyuot+d1pkpG2Fw/XKE3PDAdj57rbM97ttSp9JZ2UsP+2EHTylra9cUf6JA7tGwW1INzUrA==
+
+"@types/prop-types@*":
+  version "15.7.15"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.15.tgz#e6e5a86d602beaca71ce5163fadf5f95d70931c7"
+  integrity sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==
 
 "@types/qs@*":
   version "6.14.0"
@@ -1534,6 +1703,14 @@
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.7.tgz#50ae4353eaaddc04044279812f52c8c65857dbcb"
   integrity sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==
+
+"@types/react@^18.2.64":
+  version "18.3.24"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.24.tgz#f6a5a4c613242dfe3af0dcee2b4ec47b92d9b6bd"
+  integrity sha512-0dLEBsA1kI3OezMBF8nSsb7Nk19ZnsyE1LLhB8r27KbgU5H4pvuqZLdtE+aUkJVoXgTVuA+iLIwmZ0TuK4tx6A==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
 
 "@types/retry@0.12.2":
   version "0.12.2"
@@ -1592,6 +1769,13 @@
   version "16.0.4"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/yargs/-/yargs-16.0.4.tgz#26aad98dd2c2a38e421086ea9ad42b9e51642977"
   integrity sha512-T8Yc9wt/5LbJyCaLiHPReJa0kApcIgJ7Bn735GjItUfh08Z1pJvu8QZqb9s+mMvKV6WUQRV7K2R46YbjMXTTJw==
+  dependencies:
+    "@types/yargs-parser" "*"
+
+"@types/yargs@^17.0.8":
+  version "17.0.33"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.33.tgz#8c32303da83eec050a84b3c7ae7b9f922d13e32d"
+  integrity sha512-WpxBCKWPLr4xSsHgz511rFJAM+wS28w2zEO1QDNY5zM/S8ok70NNfztH0xwhqKyaK0OHCbN98LDAZuy1ctxDkA==
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -2185,13 +2369,6 @@ axe-core@^4.3.5:
   version "4.4.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/axe-core/-/axe-core-4.4.1.tgz#7dbdc25989298f9ad006645cd396782443757413"
   integrity sha512-gd1kmb21kwNuWr6BQz8fv6GNECPBnUasepcoLbekws23NVBLODdsClRZ+bQ8+9Uomf3Sm3+Vwn0oYG9NvwnJCw==
-
-axios@^0.21.1:
-  version "0.21.4"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
-  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
-  dependencies:
-    follow-redirects "^1.14.0"
 
 axobject-query@^2.2.0:
   version "2.2.0"
@@ -3002,6 +3179,11 @@ cssstyle@^2.3.0:
   dependencies:
     cssom "~0.3.6"
 
+csstype@^3.0.2:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.3.tgz#d80ff294d114fb0e6ac500fbf85b60137d7eff81"
+  integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
+
 damerau-levenshtein@^1.0.7:
   version "1.0.8"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
@@ -3219,6 +3401,11 @@ diff-sequences@^27.5.1:
   version "27.5.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/diff-sequences/-/diff-sequences-27.5.1.tgz#eaecc0d327fd68c8d9672a1e64ab8dccb2ef5327"
   integrity sha512-k1gCAXAsNgLwEL+Y8Wvl+M6oEFj5bgazfZULpS5CneoPPXRaCCW7dm+q21Ky2VEE5X+VeRDBVg1Pcvvsr4TtNQ==
+
+diff-sequences@^29.6.3:
+  version "29.6.3"
+  resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-29.6.3.tgz#4deaf894d11407c51efc8418012f9e70b84ea921"
+  integrity sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==
 
 diff@^7.0.0:
   version "7.0.0"
@@ -3931,6 +4118,17 @@ expect@^27.5.1:
     jest-matcher-utils "^27.5.1"
     jest-message-util "^27.5.1"
 
+expect@^29.0.0:
+  version "29.7.0"
+  resolved "https://registry.yarnpkg.com/expect/-/expect-29.7.0.tgz#578874590dcb3214514084c08115d8aee61e11bc"
+  integrity sha512-2Zks0hf1VLFYI1kbh0I5jP3KHHyCHpkfyHBzsSXRFgl/Bg9mWYfMW8oD+PdMPlEwy5HNsR9JutYy6pMeOh61nw==
+  dependencies:
+    "@jest/expect-utils" "^29.7.0"
+    jest-get-type "^29.6.3"
+    jest-matcher-utils "^29.7.0"
+    jest-message-util "^29.7.0"
+    jest-util "^29.7.0"
+
 exponential-backoff@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/exponential-backoff/-/exponential-backoff-3.1.2.tgz#a8f26adb96bf78e8cd8ad1037928d5e5c0679d91"
@@ -4131,11 +4329,6 @@ follow-redirects@^1.0.0:
   version "1.15.11"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.11.tgz#777d73d72a92f8ec4d2e410eb47352a56b8e8340"
   integrity sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==
-
-follow-redirects@^1.14.0:
-  version "1.14.9"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
-  integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
 for-each@^0.3.3, for-each@^0.3.5:
   version "0.3.5"
@@ -4557,6 +4750,11 @@ he@^1.2.0:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
+headers-utils@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/headers-utils/-/headers-utils-3.0.2.tgz#dfc65feae4b0e34357308aefbcafa99c895e59ef"
+  integrity sha512-xAxZkM1dRyGV2Ou5bzMxBPNLoRCjcX+ya7KSWybQD2KwLphxsapUVK6x/02o7f4VU6GPSXch9vNY2+gkU8tYWQ==
+
 hidefile@^3.0.0:
   version "3.0.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/hidefile/-/hidefile-3.0.0.tgz#5d2fb892a00a9285385ca8cc4aefc6952084ac2c"
@@ -4838,7 +5036,14 @@ internal-slot@^1.1.0:
     hasown "^2.0.2"
     side-channel "^1.1.0"
 
-io-ts@^2.2.22:
+io-ts-reporters@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/io-ts-reporters/-/io-ts-reporters-2.0.1.tgz#0154545aefd115f0f175a41743ed7327d19b1c34"
+  integrity sha512-RVpLstYBsmTGgCW9wJ5KVyN/eRnRUDp87Flt4D1O3aJ7oAnd8csq8aXuu7ZeNK8qEDKmjUl9oUuzfwikaNAMKQ==
+  dependencies:
+    "@scarf/scarf" "^1.1.1"
+
+io-ts@^2.2.21, io-ts@^2.2.22:
   version "2.2.22"
   resolved "https://registry.yarnpkg.com/io-ts/-/io-ts-2.2.22.tgz#5ab0d3636fe8494a275f0266461ab019da4b8d0b"
   integrity sha512-FHCCztTkHoV9mdBsHpocLpdTAfh956ZQcIkWQxxS0U5HT53vtrcuYdQneEJKH6xILaLNzXVl2Cvwtoy8XNN0AA==
@@ -5352,6 +5557,16 @@ jest-diff@^27.5.1:
     jest-get-type "^27.5.1"
     pretty-format "^27.5.1"
 
+jest-diff@^29.7.0:
+  version "29.7.0"
+  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-29.7.0.tgz#017934a66ebb7ecf6f205e84699be10afd70458a"
+  integrity sha512-LMIgiIrhigmPrs03JHpxUh2yISK3vLFPkAodPeo0+BuF7wA2FoQbkEg1u8gBYBThncu7e1oEDUfIXVuTqLRUjw==
+  dependencies:
+    chalk "^4.0.0"
+    diff-sequences "^29.6.3"
+    jest-get-type "^29.6.3"
+    pretty-format "^29.7.0"
+
 jest-docblock@^27.5.1:
   version "27.5.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/jest-docblock/-/jest-docblock-27.5.1.tgz#14092f364a42c6108d42c33c8cf30e058e25f6c0"
@@ -5407,6 +5622,11 @@ jest-get-type@^27.5.1:
   version "27.5.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/jest-get-type/-/jest-get-type-27.5.1.tgz#3cd613c507b0f7ace013df407a1c1cd578bcb4f1"
   integrity sha512-2KY95ksYSaK7DMBWQn6dQz3kqAf3BB64y2udeG+hv4KfSOb9qwcYQstTJc1KCbsix+wLZWZYN8t7nwX3GOBLRw==
+
+jest-get-type@^29.6.3:
+  version "29.6.3"
+  resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-29.6.3.tgz#36f499fdcea197c1045a127319c0481723908fd1"
+  integrity sha512-zrteXnqYxfQh7l5FHyL38jL39di8H8rHoecLH3JNxH3BwOrBsNeabdap5e0I23lD4HHI8W5VFBZqG4Eaq5LNcw==
 
 jest-haste-map@^27.5.1:
   version "27.5.1"
@@ -5469,6 +5689,16 @@ jest-matcher-utils@^27.0.0, jest-matcher-utils@^27.5.1:
     jest-get-type "^27.5.1"
     pretty-format "^27.5.1"
 
+jest-matcher-utils@^29.7.0:
+  version "29.7.0"
+  resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-29.7.0.tgz#ae8fec79ff249fd592ce80e3ee474e83a6c44f12"
+  integrity sha512-sBkD+Xi9DtcChsI3L3u0+N0opgPYnCRPtGcQYrgXmR+hmt/fYfWAL0xRXYU8eWOdfuLgBe0YCW3AFtnRLagq/g==
+  dependencies:
+    chalk "^4.0.0"
+    jest-diff "^29.7.0"
+    jest-get-type "^29.6.3"
+    pretty-format "^29.7.0"
+
 jest-message-util@^27.5.1:
   version "27.5.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/jest-message-util/-/jest-message-util-27.5.1.tgz#bdda72806da10d9ed6425e12afff38cd1458b6cf"
@@ -5481,6 +5711,21 @@ jest-message-util@^27.5.1:
     graceful-fs "^4.2.9"
     micromatch "^4.0.4"
     pretty-format "^27.5.1"
+    slash "^3.0.0"
+    stack-utils "^2.0.3"
+
+jest-message-util@^29.7.0:
+  version "29.7.0"
+  resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-29.7.0.tgz#8bc392e204e95dfe7564abbe72a404e28e51f7f3"
+  integrity sha512-GBEV4GRADeP+qtB2+6u61stea8mGcOT4mCtrYISZwfu9/ISHFJ/5zOMXYbpBE9RsS5+Gb63DW4FgmnKJ79Kf6w==
+  dependencies:
+    "@babel/code-frame" "^7.12.13"
+    "@jest/types" "^29.6.3"
+    "@types/stack-utils" "^2.0.0"
+    chalk "^4.0.0"
+    graceful-fs "^4.2.9"
+    micromatch "^4.0.4"
+    pretty-format "^29.7.0"
     slash "^3.0.0"
     stack-utils "^2.0.3"
 
@@ -5624,6 +5869,18 @@ jest-util@^27.0.0, jest-util@^27.5.1:
   integrity sha512-Kv2o/8jNvX1MQ0KGtw480E/w4fBCDOnH6+6DmeKi6LZUIlKA5kwY0YNdlzaWTiVgxqAqik11QyxDOKk543aKXw==
   dependencies:
     "@jest/types" "^27.5.1"
+    "@types/node" "*"
+    chalk "^4.0.0"
+    ci-info "^3.2.0"
+    graceful-fs "^4.2.9"
+    picomatch "^2.2.3"
+
+jest-util@^29.7.0:
+  version "29.7.0"
+  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-29.7.0.tgz#23c2b62bfb22be82b44de98055802ff3710fc0bc"
+  integrity sha512-z6EbKajIpqGKU56y5KBUgy1dt1ihhQJgWzUlZHArA/+X2ad7Cb5iF+AK1EWVL/Bo7Rz9uurpqw6SiBCefUbCGA==
+  dependencies:
+    "@jest/types" "^29.6.3"
     "@types/node" "*"
     chalk "^4.0.0"
     ci-info "^3.2.0"
@@ -6174,7 +6431,7 @@ minimatch@^5.1.0:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimatch@^9.0.4, minimatch@^9.0.5:
+minimatch@^9.0.3, minimatch@^9.0.4, minimatch@^9.0.5:
   version "9.0.5"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.5.tgz#d74f9dd6b57d83d8e98cfb82133b03978bc929e5"
   integrity sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==
@@ -6840,6 +7097,15 @@ pretty-format@^27.0.0, pretty-format@^27.5.1:
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
 
+pretty-format@^29.0.0, pretty-format@^29.7.0:
+  version "29.7.0"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-29.7.0.tgz#ca42c758310f365bfa71a0bda0a807160b776812"
+  integrity sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==
+  dependencies:
+    "@jest/schemas" "^29.6.3"
+    ansi-styles "^5.0.0"
+    react-is "^18.0.0"
+
 printj@~1.3.1:
   version "1.3.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/printj/-/printj-1.3.1.tgz#9af6b1d55647a1587ac44f4c1654a4b95b8e12cb"
@@ -6976,6 +7242,11 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-is@^18.0.0:
+  version "18.3.1"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
+  integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
 readable-stream@^2.0.1:
   version "2.3.8"
@@ -8718,7 +8989,7 @@ write-file-atomic@^3.0.0:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-ws@^7.3.1:
+ws@^7.3.1, ws@^7.5.9:
   version "7.5.10"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.10.tgz#58b5c20dc281633f6c19113f39b349bd8bd558d9"
   integrity sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==
