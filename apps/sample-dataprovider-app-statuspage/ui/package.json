@@ -4,7 +4,7 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "@atlaskit/button": "^16.1.6",
+    "@atlaskit/button": "^16.18.1",
     "@atlaskit/form": "^8.5.6",
     "@atlaskit/css-reset": "^6.3.8",
     "@atlaskit/textfield": "^5.1.12",
