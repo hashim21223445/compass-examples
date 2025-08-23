@@ -5,7 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "@atlaskit/button": "^16.1.6",
-    "@atlaskit/form": "^8.5.6",
+    "@atlaskit/form": "^8.11.13",
     "@atlaskit/css-reset": "^6.3.8",
     "@atlaskit/textfield": "^5.1.12",
     "@atlassian/forge-graphql": "^5.9.3",
