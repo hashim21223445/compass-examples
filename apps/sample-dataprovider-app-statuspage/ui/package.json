@@ -6,7 +6,7 @@
   "dependencies": {
     "@atlaskit/button": "^16.1.6",
     "@atlaskit/form": "^8.5.6",
-    "@atlaskit/css-reset": "^6.3.8",
+    "@atlaskit/css-reset": "^6.16.0",
     "@atlaskit/textfield": "^5.1.12",
     "@atlassian/forge-graphql": "^5.9.3",
     "@forge/bridge": "^2.1.3",
